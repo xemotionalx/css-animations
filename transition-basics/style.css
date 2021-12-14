@@ -1,0 +1,89 @@
+/* transitions */
+
+/* apply transitions to a specific element to make a property change smoothly over a given duration or animate it in a nice way*/
+.transition--basics {
+    height: 70px;
+    width: 220px;
+    border: none;
+    border-radius: 40px;
+    color: white;
+
+    /* this is the property that will transition */
+    background-color: blueviolet;
+
+    /* identify the property to apply the transition to */
+        /* can list all the properties affected, or shorthand is "all" */
+    transition-property: background-color width;
+    /* span of time it will take for the property to change from the initial state to the final one */
+    transition-duration: 1s;
+    /* transition delay: amount of time until the transition starts */
+    transition-delay: 1s;
+}
+
+/* this is defining what the final property will look like at the end of the transition */
+.transition--basics:hover {
+    background-color: crimson;
+    width: 300px;
+}
+
+
+.container {
+    width: 800px;
+}
+
+/* transition-timing function defines how the change in property will occur */
+.move {
+    width: 130px;
+    height: 50px;
+    padding: 10px 15px;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 40px;
+    font-size: 20px;
+    background-color: crimson;
+    margin: 10px 0px;
+
+    transition-property: translate();
+    transition-duration: 3s;
+}
+
+/* ease: the default -- starts slow - gets faster - ends slow */
+
+.ease {
+    transition-timing-function: ease;
+}
+
+/* linear: same ratefrom beginning to end*/
+.linear {
+    transition-timing-function: linear;
+}
+
+/* ease-in: starts slow, gets faster towards the end */
+.ease-in {
+    transition-timing-function: ease-in;
+}
+
+/* ease out: starts fast, gets slower before the end */
+.ease-out {
+    transition-timing-function: ease-out;
+}
+
+/* ease-in-out: starts slow - gets fasterr - ends slow (similar to ease) */
+.ease-in-out {
+    transition-timing-function: ease-in-out;
+}
+
+.move:hover {
+    /* this is the property affected by transition on hover */
+    transform: translate(800px, 0);
+}
+
+  /* SHORTHAND */
+    /* transition: property duration timing-function delay */
+    /* CAN LIST DIFFERENT TRANSITIONS FOR A LIST OF PROPERTIES */
+    /* transition: property duration timing-function delay,
+        2nd property duration timing-function delay */
+
+/* Properties that can be transitioned */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties */
