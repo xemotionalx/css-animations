@@ -1,0 +1,57 @@
+/* 2D TRANSFORMATIONS */
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: cadetblue;
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 200px;
+    margin-top: 10px;
+}
+
+/* translate: move an element anywhere in the browser window */
+.translate {
+    transition: transform 2s;
+}
+.translate:hover {
+    transform: translateX(500px);
+    /* use negative value to move left */
+    /* other options: */
+        /* translateY(#) */
+        /* translate(X, Y) */
+}
+
+/* scale: changes size of an element */
+.scale:hover {
+    transform: scaleX(2);
+    /* scaleX() - changes width */
+    /* scaleY() - changes height */
+    /* scale(X,Y) - changes width & height */
+    /* scale(#) - changes both width & height proportionately */
+}
+
+ /* rotate: turn the image by a number of degrees */
+ .rotate:hover {
+     transform: rotate(20deg);
+     /* positive: rotates clockwise */
+     /* negative: rotates counter-clockwise */
+ }
+
+ /* skew: uses X/Y like translate, uses degrees like rotate, affects shape like skale */
+ .skew:hover {
+     transform: skewX(20deg);
+ }
+
+ /* transform-origin: sets point at which the transform applies */
+ .rotate-with-origin {
+    transform-origin: top left;
+    /* can also use percentages - X (100% = left), Y (100% = top) */
+    /* ex: 50% 80% */
+    /* can also use pixels */
+    /* ex: 100px 50px */
+ }
+.rotate-with-origin:hover {
+    transform: rotate(20deg);
+}
+
