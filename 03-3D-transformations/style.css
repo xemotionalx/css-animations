@@ -2,23 +2,40 @@
 /* must always define perspective in a 3d environment */
 body {
     /* this property is added to the container of the element being modified with the 3D animation */
-    perspective: 1000px; 
+    perspective: 500px; 
 }
 
+/* ROTATE IN 3D */
+
+img {
+  display: block;
+  margin: auto;
+  margin-top: 200px;
+  transition: transform 1s;
+  width: 300px;
+}
+
+img:hover {
+  /* can rotate on 3 axes: X, Y, Z */
+  transform: rotateY(60deg);
+}
+
+/* TRANSLATE IN 3D */
+
 .square {
-    width: 200px;
-    height: 200px;
     background-color: cadetblue;
-    display: block;
     color: whitesmoke;
-    text-align: center;
+    display: block;
+    height: 200px;
     line-height: 200px;
     margin-top: 10px;
+    text-align: center;
+    width: 200px;
 }
 
 .translate {
-    transition: transform 2s;
     margin: auto;
+    transition: transform 2s;
 }
 
 .translate:hover {
