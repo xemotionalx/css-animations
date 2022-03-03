@@ -1,0 +1,28 @@
+/* perspective = distance between eyes & the screen */
+/* must always define perspective in a 3d environment */
+body {
+    /* this property is added to the container of the element being modified with the 3D animation */
+    perspective: 1000px; 
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: cadetblue;
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 200px;
+    margin-top: 10px;
+}
+
+.translate {
+    transition: transform 2s;
+    margin: auto;
+}
+
+.translate:hover {
+    /* 3D uses Z axis */
+    /* if this number is greater than the perspective, it will disappear */
+    transform: translateZ(-500px);
+}
