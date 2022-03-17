@@ -1,0 +1,46 @@
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+a {
+  border: 5px solid #272727;
+  color: #272727;
+  font-family: sans-serif;
+  font-size: 45px;
+  /* prevent the yellow pseudoelement from beiing seen when not contained in this element */
+  overflow: hidden;
+  padding: 40px 80px;
+  position: relative;
+  text-decoration: none;
+}
+
+/* pseudoelements allow you to insert code before or after html elements */
+a:before {
+
+  /* fills container with yellow color */
+  background-color: #fff200;
+  /* no text to display */
+  content: '';
+  height: 100%;
+  left: 0;
+
+  /* there is a pseudoelement inserted at the top left corner of the a element */
+  position: absolute;
+  top: 0;
+  /* initial position of the yellow background */
+  transform: rotate(-90deg);
+  /* this is the origin point of the rotation */
+  transform-origin: bottom left;
+  transition: transform 1s;
+  width: 100%;
+  /* positions the yellow background color behind the hover me text */
+  z-index: -1;
+}
+
+/* this applies the animation on the psuedoelement when hovered */
+a:hover:before {
+  transform: rotate(0deg);
+}
